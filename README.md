@@ -8,13 +8,13 @@
 # 使用
 ## 使用前提
 使用项目前需要将 opensource/makefile 中的  
-'''
-cpjuulib:  
-	$(shell echo "xxx" | sudo -S cp $(JUU_LIB)  /usr/lib/)  
+```  
+cpjuulib:    
+	$(shell echo "xxx" | sudo -S cp $(JUU_LIB)  /usr/lib/)    
 
-rmjuulib:  
-	$(shell echo "xxx" | sudo -S rm -rf /usr/lib/libjuu.so)  
-'''  
+rmjuulib:    
+	$(shell echo "xxx" | sudo -S rm -rf /usr/lib/libjuu.so)    
+```  
 其中的xxx改为自己的系统密码  
 
 ## 使用方法
