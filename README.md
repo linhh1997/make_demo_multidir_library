@@ -1,61 +1,63 @@
 # 前言
-本项目是一个练习makefile的项目，主要目的有两个
->1.实现多级文件编译
->2.实现静态库和动态库编译，并将器链接至项目中
-
-因此本项目适用于对makefile基本语法有所了解、想要事项上述两个功能的读者
+本项目是一个练习makefile的项目，主要目的有两个  
+>1.实现多级文件编译  
+>2.实现静态库和动态库编译，并将器链接至项目中  
+  
+因此本项目适用于对makefile基本语法有所了解、想要事项上述两个功能的读者  
 
 # 使用
 ## 使用前提
-使用项目前需要将 opensource/makefile 中的
-cpjuulib:
-	$(shell echo "xxx" | sudo -S cp $(JUU_LIB)  /usr/lib/)
+使用项目前需要将 opensource/makefile 中的  
+'''
+cpjuulib:  
+	$(shell echo "xxx" | sudo -S cp $(JUU_LIB)  /usr/lib/)  
 
-rmjuulib:
-	$(shell echo "xxx" | sudo -S rm -rf /usr/lib/libjuu.so)
-其中的xxx改为自己的系统密码
+rmjuulib:  
+	$(shell echo "xxx" | sudo -S rm -rf /usr/lib/libjuu.so)  
+'''  
+其中的xxx改为自己的系统密码  
 
 ## 使用方法
-在当前路径执行
-make
-可实现全项目编译
+在当前路径执行  
+make  
+可实现全项目编译  
 
-在当前路径执行
-make clean
-可实现全项目清理，清理掉所有的生成文件
+在当前路径执行  
+make clean  
+可实现全项目清理，清理掉所有的生成文件  
 
 
-在opensource路径执行
-make
-可单独生成库文件
+在opensource路径执行  
+make  
+可单独生成库文件  
 
-在opensource路径执行
-make clean_opensource
-可单独清理掉所有库相关的生成文件
+在opensource路径执行  
+make clean_opensource  
+可单独清理掉所有库相关的生成文件  
 
 # 项目结构
 .
-├── build
-├── inc
-│   └── header.h
-├── makefile
-├── obj
-├── opensource
-│   ├── include
-│   │   ├── juu.h
-│   │   └── lhhadd.h
-│   ├── juu
-│   │   ├── juu.cpp
-│   │   └── juu.h
-│   ├── lhhadd
-│   │   ├── lhhadd.cpp
-│   │   └── lhhadd.h
-│   ├── lib
-│   ├── makefile
-│   └── obj
-└── src
-    └── main.cpp
-
+├── build  
+├── inc  
+│   └── header.h  
+├── makefile  
+├── obj  
+├── opensource  
+│   ├── include  
+│   │   ├── juu.h  
+│   │   └── lhhadd.h  
+│   ├── juu  
+│   │   ├── juu.cpp  
+│   │   └── juu.h  
+│   ├── lhhadd  
+│   │   ├── lhhadd.cpp  
+│   │   └── lhhadd.h  
+│   ├── lib  
+│   ├── makefile  
+│   └── obj  
+└── src  
+    └── main.cpp  
+  
 ## 文件结构说明
 |  路径    |  说明 |
 |:------: | :----- |
@@ -66,7 +68,7 @@ make clean_opensource
 | opensource  | 库相关文件存放目录 |
 | makefile  | 主makefile[外层makefile]，用于生成整个项目的最终产物 |
 
-其中，opensource用于存放静态库和动态库相关的文件
+其中，opensource用于存放静态库和动态库相关的文件  
 |  路径    |  说明 |
 |:------: | :----- |
 | opensource/include  | 存放各个静态库的头文件(本demo仅有lhhadd一个静态库+juu一个动态库，所以仅放了两个头文件) |
