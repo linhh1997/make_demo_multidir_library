@@ -1,12 +1,12 @@
-#前言
+# 前言
 本项目是一个练习makefile的项目，主要目的有两个
 >1.实现多级文件编译
 >2.实现静态库和动态库编译，并将器链接至项目中
 
 因此本项目适用于对makefile基本语法有所了解、想要事项上述两个功能的读者
 
-#使用
-##使用前提
+# 使用
+## 使用前提
 使用项目前需要将 opensource/makefile 中的
 cpjuulib:
 	$(shell echo "xxx" | sudo -S cp $(JUU_LIB)  /usr/lib/)
@@ -15,7 +15,7 @@ rmjuulib:
 	$(shell echo "xxx" | sudo -S rm -rf /usr/lib/libjuu.so)
 其中的xxx改为自己的系统密码
 
-##使用方法
+## 使用方法
 在当前路径执行
 make
 可实现全项目编译
@@ -33,7 +33,7 @@ make
 make clean_opensource
 可单独清理掉所有库相关的生成文件
 
-#项目结构
+# 项目结构
 .
 ├── build
 ├── inc
@@ -56,7 +56,7 @@ make clean_opensource
 └── src
     └── main.cpp
 
-##文件结构说明
+## 文件结构说明
 |  路径    |  说明 |
 |:------: | :----- |
 |build  | 最终生成的可执行文件的存放路径 |
